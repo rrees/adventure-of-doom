@@ -17,6 +17,11 @@ handlers:
 - url: /tasks/.*
   script: tasks.app
 
+- url: /admin/editor(/.*|)
+  login: admin
+  secure: always
+  script: editor.app.app
+
 - url: /.*
   script: app.app
 
